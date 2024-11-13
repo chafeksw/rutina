@@ -1,147 +1,204 @@
+:root {
+    --primary-color: #4CAF50;
+    --primary-dark: #45a049;
+    --background-light: #f4f4f4;
+    --text-color: #333;
+    --border-color: #ddd;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
 }
+
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
-h1, h2 {
-  color: #4CAF50;
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+
+/* Navigation Styles */
+nav {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
-th {
-  background-color: #4CAF50;
-  color: white;
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
-.timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
-.timeline-event {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  width: 100%;
+
+/* Calendar Styles */
+.calendar-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
 }
-.timeline-event-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  margin-right: 20px;
-}
-.timeline-event-content {
-  flex-grow: 1;
-}
-.timeline-event-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.timeline-event-description {
-  font-size: 14px;
-}
-.collapsible {
-  background-color: #4CAF50;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 18px;
-  margin-top: 20px;
-}
-.active, .collapsible:hover {
-  background-color: #45a049;
-}
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-#app {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 .month-selector {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
-button {
-  padding: 10px;
-  cursor: pointer;
+
+.month-selector button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.month-selector button:hover {
+    background-color: var(--primary-dark);
+}
+
 #calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
 }
+
 .day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #fff;
-}
-.day.training {
-  background-color: #c5e1a5;
-}
-.day.rest {
-  background-color: #ffab91;
-}
-.day:hover {
-  background-color: #90caf9;
-}
-#routineDetail {
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-}
-#routineContent {
-  font-size: 14px;
-}
-@media (max-width: 600px) {
-  .container {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-  }
-  th, td {
-    padding: 8px;
-  }
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.day.training {
+    background-color: #c5e1a5;
+}
+
+.day.rest {
+    background-color: #ffab91;
+}
+
+.day:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Routine Sections Styles */
+.day-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.collapsible {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible:hover {
+    background-color: var(--primary-dark);
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+    border-radius: 0 0 4px 4px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* YouTube Section Styles */
+.tutorials-section {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.video-grid {
+    display: grid;
 }
