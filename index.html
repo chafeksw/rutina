@@ -1,193 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rutina Semanal de Calistenia</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutina Semanal de Calistenia</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <div class="month-selector">
-      <button id="prevMonth">Anterior</button>
-      <h2 id="currentMonth"></h2>
-      <button id="nextMonth">Siguiente</button>
-    </div>
-    <div id="calendar"></div>
-    <div id="routineDetail">
-      <h3>Rutina del día</h3>
-      <div id="routineContent">Selecciona un día para ver los detalles de la rutina</div>
-    </div>
-  </div>
+    <div class="container">
+        <header>
+            <h1>Rutina Semanal de Calistenia</h1>
+        </header>
 
-  <div class="container">
-    <h1>Rutina Semanal de Calistenia</h1>
+        <nav>
+            <ul>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#lunes">Lunes</a></li>
+                <li><a href="#miercoles">Miércoles</a></li>
+                <li><a href="#jueves">Jueves</a></li>
+                <li><a href="#sabado">Sábado</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+            </ul>
+        </nav>
 
-    <nav>
-      <ul>
-        <li><a href="#lunes">Lunes</a></li>
-        <li><a href="#miercoles">Miércoles</a></li>
-        <li><a href="#jueves">Jueves</a></li>
-        <li><a href="#sabado">Sábado</a></li>
-      </ul>
-    </nav>
+        <section id="calendario" class="calendar-container">
+            <h2>Calendario de Entrenamiento</h2>
+            <div class="month-selector">
+                <button id="prevMonth">Mes Anterior</button>
+                <h2 id="currentMonth"></h2>
+                <button id="nextMonth">Mes Siguiente</button>
+            </div>
+            <div id="calendar"></div>
+            <div id="routineDetail">
+                <h3>Rutina del día</h3>
+                <div id="routineContent">Selecciona un día para ver los detalles de la rutina</div>
+            </div>
+        </section>
 
-    <div id="lunes" class="day-section">
-      <h2>Lunes: Combos</h2>
-      <button class="collapsible">Mostrar/Ocultar</button>
-      <div class="content">
-        <table>
-          <thead>
-            <tr>
-              <th>Ejercicio</th>
-              <th>Descripción</th>
-              <th>Duración</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Plancha</td>
-              <td>Tuck planche, lean presses, flexiones de pino</td>
-              <td>45 seg - 1 min 15 seg</td>
-            </tr>
-            <tr>
-              <td>Front Lever</td>
-              <td>Pull-ups limpias, negativas de front lever</td>
-              <td>45 seg - 1 min 15 seg</td>
-            </tr>
-            <tr>
-              <td>Freestyle</td>
-              <td>360 swing, tornado 360, ginger</td>
-              <td>45 seg - 1 min 15 seg</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div id="miercoles" class="day-section">
-      <h2>Miércoles: Plancha</h2>
-      <button class="collapsible">Mostrar/Ocultar</button>
-      <div class="content">
-        <table>
-          <thead>
-            <tr>
-              <th>Ejercicio</th>
-              <th>Series</th>
-              <th>Repeticiones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Press olímpico (con pausa 3 seg) + 90º push-up straddle</td>
-              <td>4</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Tuck planche hold (3 seg) + Press tuck + Negativa tuck + Tuck planche hold (3 seg)</td>
-              <td>4</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Advanced tuck hold</td>
-              <td>4</td>
-              <td>5-15 seg</td>
-            </tr>
-            <tr>
-              <td>Flexiones de pino</td>
-              <td>3</td>
-              <td>5-15</td>
-            </tr>
-            <tr>
-              <td>Fondo + Advanced tuck + Subida/bajada escapular + Lean planche (30 seg) + 10 presses de lean</td>
-              <td>3</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div id="jueves" class="day-section">
-      <h2>Jueves: Front Lever</h2>
-      <button class="collapsible">Mostrar/Ocultar</button>
-      <div class="content">
-        <table>
-          <thead>
-            <tr>
-              <th>Ejercicio</th>
-              <th>Series</th>
-              <th>Repeticiones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>SAT (5 seg) + Touch (5 seg) + Pull-ups de touch (5 rep) + Presses front (5 rep) + Front hold (5 seg)</td>
-              <td>3</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>One-arm front lever supino (3 seg cada lado) + SAT (3 seg)</td>
-              <td>3</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Front (1 seg) + Touch (1 seg) + Negativa touch + Front (1 seg) + Touch (2 seg) + Pull-ups al fallo + Press al fallo + Front (3 seg intento)</td>
-              <td>4</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Pull-ups clean + Touch (2 rep cada 30 seg, 8 rep total)</td>
-              <td>4</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Tuck advanced pull-ups + Tuck advanced presses</td>
-              <td>3</td>
-              <td>8 rep cada uno</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div id="sabado" class="day-section">
-      <h2>Sábado: Plancha (Enfoque en Presses)</h2>
-      <button class="collapsible">Mostrar/Ocultar</button>
-      <div class="content">
-        <p>- Mismo calentamiento que el miércoles.</p>
-        <p>- Modificaciones:</p>
-        <ul>
-          <li>Prioriza presses perfectos con pausas.</li>
-          <li>Menos enfoque en las 90º push-ups.</li>
-          <li>Finaliza con tuck holds para consolidar técnica.</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>Línea de Tiempo de Progresión de Trucos Freestyle</h2>
-    <div class="timeline">
-      <div class="timeline-event">
-        <div class="timeline-event-icon">1</div>
-        <div class="timeline-event-content">
-          <div class="timeline-event-title"><a href="https://www.youtube.com/watch?v=pM6WllI7llU" target="_blank">Swing Básico</a></div>
-          <div class="timeline-event-description">Tiempo estimado: 2-4 semanas</div>
+        <div id="lunes" class="day-section">
+            <h2>Lunes: Combos</h2>
+            <button class="collapsible">Mostrar/Ocultar</button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ejercicio</th>
+                            <th>Descripción</th>
+                            <th>Duración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plancha</td>
+                            <td>Tuck planche, lean presses, flexiones de pino</td>
+                            <td>45 seg - 1 min 15 seg</td>
+                        </tr>
+                        <tr>
+                            <td>Front Lever</td>
+                            <td>Pull-ups limpias, negativas de front lever</td>
+                            <td>45 seg - 1 min 15 seg</td>
+                        </tr>
+                        <tr>
+                            <td>Freestyle</td>
+                            <td>360 swing, tornado 360, ginger</td>
+                            <td>45 seg - 1 min 15 seg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
-      <!-- Repite el mismo patrón para los demás eventos -->
+
+        <div id="miercoles" class="day-section">
+            <h2>Miércoles: Plancha</h2>
+            <button class="collapsible">Mostrar/Ocultar</button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ejercicio</th>
+                            <th>Series</th>
+                            <th>Repeticiones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Press olímpico (con pausa 3 seg) + 90º push-up straddle</td>
+                            <td>4</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Tuck planche hold (3 seg) + Press tuck + Negativa tuck + Tuck planche hold (3 seg)</td>
+                            <td>4</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced tuck hold</td>
+                            <td>4</td>
+                            <td>5-15 seg</td>
+                        </tr>
+                        <tr>
+                            <td>Flexiones de pino</td>
+                            <td>3</td>
+                            <td>5-15</td>
+                        </tr>
+                        <tr>
+                            <td>Fondo + Advanced tuck + Subida/bajada escapular + Lean planche (30 seg) + 10 presses de lean</td>
+                            <td>3</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="jueves" class="day-section">
+            <h2>Jueves: Front Lever</h2>
+            <button class="collapsible">Mostrar/Ocultar</button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ejercicio</th>
+                            <th>Series</th>
+                            <th>Repeticiones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SAT (5 seg) + Touch (5 seg) + Pull-ups de touch (5 rep) + Presses front (5 rep) + Front hold (5 seg)</td>
+                            <td>3</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>One-arm front lever supino (3 seg cada lado) + SAT (3 seg)</td>
+                            <td>3</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Front (1 seg) + Touch (1 seg) + Negativa touch + Front (1 seg) + Touch (2 seg) + Pull-ups al fallo + Press al fallo + Front (3 seg intento)</td>
+                            <td>4</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Pull-ups clean + Touch (2 rep cada 30 seg, 8 rep total)</td>
+                            <td>4</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Tuck advanced pull-ups + Tuck advanced presses</td>
+                            <td>3</td>
+                            <td>8 rep cada uno</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="sabado" class="day-section">
+            <h2>Sábado: Plancha (Enfoque en Presses)</h2>
+            <button class="collapsible">Mostrar/Ocultar</button>
+            <div class="content">
+                <p>- Mismo calentamiento que el miércoles.</p>
+                <p>- Modificaciones:</p>
+                <ul>
+                    <li>Prioriza presses perfectos con pausas.</li>
+                    <li>Menos enfoque en las 90º push-ups.</li>
+                    <li>Finaliza con tuck holds para consolidar técnica.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="youtube" class="tutorials-section">
+            <h2>Tutoriales en YouTube</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>Tutorial Tuck Planche</span>
+                    </div>
+                    <h3>Tuck Planche - Tutorial Completo</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>Tutorial Front Lever</span>
+                    </div>
+                    <h3>Front Lever - Paso a Paso</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>Tutorial Handstand</span>
+                    </div>
+                    <h3>Cómo Hacer el Pino - Guide</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>Tutorial Back Lever</span>
+                    </div>
+                    <h3>Back Lever para Principiantes</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>Tutorial Muscle Up</span>
+                    </div>
+                    <h3>Muscle Up - Tutorial Básico</h3>
+                </div>
+                <div class="video-card">
+                    <div class="video-placeholder">
+                        <span>Tutorial Human Flag</span>
+                    </div>
+                    <h3>Human Flag - Progresiones</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources">
+            <h2>Recursos Adicionales</h2>
+            <ul>
+                <li><a href="#" target="_blank">Tutorial Tuck Planche</a></li>
+                <li><a href="#" target="_blank">Cómo Entrenar el Front Lever</a></li>
+                <li><a href="#" target="_blank">Guía de Trucos Calistenia para Principiantes</a></li>
+            </ul>
+        </section>
     </div>
 
-    <p>Recuerda ir progresando paso a paso, siendo paciente y consistente en tu entrenamiento. Si tienes alguna duda, no dudes en consultarme.</p>
-
-    <h2>Recursos Adicionales</h2>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=pM6WllI7llU">Tutorial Tuck Planche</a></li>
-      <li><a href="https://www.youtube.com/watch?v=h4vCXZB-aeA">Cómo Entrenar el Front Lever</a></li>
-      <li><a href="https://www.calisthenics-gear.com/beginner-calisthenics-tricks/">Guía de Trucos Calistenia para Principiantes</a></li>
-    </ul>
-  </div>
-
-  <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
