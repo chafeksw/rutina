@@ -1,0 +1,122 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+  color: #4CAF50;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.timeline-event {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+.timeline-event-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-right: 20px;
+}
+.timeline-event-content {
+  flex-grow: 1;
+}
+.timeline-event-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.timeline-event-description {
+  font-size: 14px;
+}
+.collapsible {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.active, .collapsible:hover {
+  background-color: #45a049;
+}
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.calendar-day {
+  width: calc(14.28% - 10px);
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.calendar-day h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.calendar-day p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  th, td {
+    padding: 8px;
+  }
+  .calendar-day {
+    width: calc(50% - 10px);
+  }
+}
