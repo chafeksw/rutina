@@ -7,6 +7,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="app">
+    <div class="month-selector">
+      <button id="prevMonth">Anterior</button>
+      <h2 id="currentMonth"></h2>
+      <button id="nextMonth">Siguiente</button>
+    </div>
+    <div id="calendar"></div>
+    <div id="routineDetail">
+      <h3>Rutina del día</h3>
+      <div id="routineContent">Selecciona un día para ver los detalles de la rutina</div>
+    </div>
+  </div>
+
   <div class="container">
     <h1>Rutina Semanal de Calistenia</h1>
 
@@ -166,38 +179,6 @@
 
     <p>Recuerda ir progresando paso a paso, siendo paciente y consistente en tu entrenamiento. Si tienes alguna duda, no dudes en consultarme.</p>
 
-    <h2>Calendario de Entrenamiento</h2>
-    <div class="calendar">
-      <div class="calendar-day">
-        <h3>Lunes</h3>
-        <p>Combos</p>
-      </div>
-      <div class="calendar-day">
-        <h3>Martes</h3>
-        <p>Descanso</p>
-      </div>
-      <div class="calendar-day">
-        <h3>Miércoles</h3>
-        <p>Plancha</p>
-      </div>
-      <div class="calendar-day">
-        <h3>Jueves</h3>
-        <p>Front Lever</p>
-      </div>
-      <div class="calendar-day">
-        <h3>Viernes</h3>
-        <p>Descanso</p>
-      </div>
-      <div class="calendar-day">
-        <h3>Sábado</h3>
-        <p>Plancha (Enfoque en Presses)</p>
-      </div>
-      <div class="calendar-day">
-        <h3>Domingo</h3>
-        <p>Descanso</p>
-      </div>
-    </div>
-
     <h2>Recursos Adicionales</h2>
     <ul>
       <li><a href="https://www.youtube.com/watch?v=pM6WllI7llU">Tutorial Tuck Planche</a></li>
@@ -209,3 +190,4 @@
   <script src="scripts.js"></script>
 </body>
 </html>
+
