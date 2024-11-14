@@ -4,14 +4,15 @@ const routineContent = document.getElementById('routineContent');
 let currentDate = new Date();
 
 const routines = {
-  "lunes": "Combos: Tuck planche, lean presses, flexiones de pino.",
-  "martes": "Front Lever: Pull-ups limpias, negativas de front lever.",
+  "lunes": "Freestyle: 360 swing, tornado 360, ginger.",
+  "martes": "Combos: Tuck planche, lean presses, flexiones de pino.",
   "miércoles": "Descanso",
-  "jueves": "Planche: Press olímpico, Tuck planche hold.",
-  "viernes": "Combos: Freestyle, 360 swing.",
-  "sábado": "Front Lever: SAT, Touch.",
-  "domingo": "Descanso"
+  "jueves": "Plancha: Press olímpico, Tuck planche hold.",
+  "viernes": "Front Lever: SAT, Touch.",
+  "sábado": "Descanso",
+  "domingo": "Plancha: Press olímpico, Tuck planche hold."
 };
+
 
 const getMonthDays = (year, month) => new Date(year, month + 1, 0).getDate();
 
